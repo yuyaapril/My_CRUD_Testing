@@ -71,3 +71,8 @@ Entity	Todo.java	Database Table ကို ကိုယ်စားပြု	Repo
 Repository	TodoRepo.java	Database CRUD	Service
 Service	TodoService.java	Logic + Database ဆက်သွယ်	Controller + Repository
 Controller	TodoController.java	API Endpoint + Request Handling	Service
+======================================================
+ဘယ်အချိန်မှာ toString() ကလုပ်တတ်သလဲ?
+1.Object ကို String နဲ့ပေါင်းသုံးတဲ့အခါ
+2.Object ကို System.out.println() နဲ့ print လုပ်တဲ့အခါ
+3.တစ်ခြား method တွေမှာ String အနေနဲ့ Object ကိုအသုံးပြုတဲ့အခါ
