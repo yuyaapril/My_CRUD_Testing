@@ -67,5 +67,12 @@ public class TodoController {
       todoService.drop(id);
       return "redirect:/todos";
     }
+
+    @GetMapping("toggle/{id}")
+    public String toggle(@PathVariable Long id) {
+      todoService.toggle(id);
+        return "redirect:/todos";
+    }
+    
  
 }

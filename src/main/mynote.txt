@@ -76,3 +76,36 @@ Controller	TodoController.java	API Endpoint + Request Handling	Service
 1.Object ကို String နဲ့ပေါင်းသုံးတဲ့အခါ
 2.Object ကို System.out.println() နဲ့ print လုပ်တဲ့အခါ
 3.တစ်ခြား method တွေမှာ String အနေနဲ့ Object ကိုအသုံးပြုတဲ့အခါ
+====================================
+git show <id>	See commit details
+git diff <id1> <id2>	Compare two commits
+git checkout <id>	View old version of project
+git revert <id>	Undo one commit safely
+git reset --hard <id>	Reset project to that commit (dangerous)
+=======================================================
+complete toggle
+project မှာ “Complete Button” (done / finished toggle) တစ်ခုရှိတယ်။
+code ထဲမှာ
+true → false,
+false → true
+လို ပြောင်းသွားတယ်။
+
+ဒီလိုလုပ်တာကို complete toggle လို့ခေါ်တတ်ပါတယ်။
+ဥပမာ: To-Do List App မှာ “Done” button ကိုနှိပ်တာနဲ့ complete state ပြောင်းတယ်။
+Database ထဲမှာ boolean state တန်ဖိုး ပြောင်းဖို့
+
+isCompleted column ကို true ↔ false ပြောင်းတဲ့အခါ
+အဲ့တာကို toggle လို့ခေါ်တယ်။
+UI ကို အသက်သွင်းဖို့
+
+complete ဖြစ်တဲ့အခါ checkmark ပြတာ
+
+incomplete ဖြစ်တဲ့အခါ normal text ပြတာ
+→ toggle နဲ့ ပြောင်းတာ။
+
+အကျဉ်းချုပ်
+---------
+complete toggle	အပြီးဖြစ်/မပြီးဖြစ် ပြောင်းဖို့သုံးတယ်
+logic	isCompleted = !isCompleted;
+အသုံးနေရာ	To-do app, task system, project tracker
+အကျိုး	တစ်ချက်နဲ့ state ပြောင်းနိုင်တာ, user friendly

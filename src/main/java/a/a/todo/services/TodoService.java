@@ -41,6 +41,14 @@ public class TodoService {
       todoRepo.save(todo); //already > update , new > new save
     }
   }
+
+  public void toggle(Long id) {
+    Todo todo = todoRepo.findById(id).orElse(null);
+    if (todo != null) {
+      todo.setCompleted(!todo.isCompleted());
+      todoRepo.save(todo);
+    }
+  }
   
   public void drop(Long id) {
     todoRepo.deleteById(id);

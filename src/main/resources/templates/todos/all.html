@@ -26,6 +26,18 @@
                   <span th:text="${todo.title}">Default</span>
                 </div> 
                 <div class="col-md-3 d-flex justify-content-end">
+
+                  <!-- 
+                    <a th:href="@{/todos/toggle/{id}(id=${todo.id})} class="btn btn-sm me-2"
+                    th:classappend="${not todo.completed ? 'btn-success': 'btn-secondary' }">
+                      <i class="fa fa-check"></i>
+                    </a>  
+                    
+                    -->
+                  <a th:href="@{/todos/toggle/{id}(id=${todo.id})}"
+                  th:attr="class=${todo.completed ? 'btn btn-sm btn-secondary me-2' : 'btn btn-sm btn-success me-2'}">
+                    <i class="fa fa-check"></i>
+                  </a>                  
                   <a th:href="@{/todos/edit/{id}(id=${todo.id})}" class="btn btn-sm btn-warning me-2">
                     <i class="fa fa-edit"></i>
                   </a>
