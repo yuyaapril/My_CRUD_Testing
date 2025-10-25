@@ -5,3 +5,5 @@
 5.Entity
 6.Service
 7.POJO
+8.Toggle
+9.Filtering (all, completed , incompled)

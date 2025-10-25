@@ -6,15 +6,34 @@
 
     <div th:replace="~{includes/navbar :: nav}"></div>
   
-    <div class="container">
+    <div class="container mt-5">
       <div class="d-flex justify-content-between">
          <h3 class="mt-5 mb-2">Todos</h3>
-         <span class="mt-5 mb-2">
-          <a href="/todos/add" class="btn btn-sm btn-success">
-                    <i class="fa fa-plus"></i> Add
-                  </a>
-         </span>
-      </div>
+         <div class="d-flex justify-content-end">
+            <span class="me-2">
+            <a href="/todos/add" class="btn btn-sm btn-success">
+                      <i class="fa fa-plus"></i> Add
+                    </a>
+          </span>
+       
+        <!-- Filtering -->
+
+          <div class="dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Filter
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/todos">All</a></li>
+              <li><a class="dropdown-item" href="/todos/filter/true">Completed</a></li>
+              <li><a class="dropdown-item" href="/todos/filter/false">In Progress</a></li>
+            </ul>
+        </div>
+         </div>
+    </div>
+         
+      
+
+       
 
       <!-- for looping  -->
       <th:block th:each="todo : ${todos}">

@@ -71,8 +71,17 @@ public class TodoController {
     @GetMapping("toggle/{id}")
     public String toggle(@PathVariable Long id) {
       todoService.toggle(id);
-        return "redirect:/todos";
+      return "redirect:/todos";
     }
+
+    @GetMapping("filter/{completed}")
+    public String filter(@PathVariable boolean completed, Model model) {
+      List<Todo> todos = todoService.filter(completed);
+      model.addAttribute("todos", todos);
+        return "todos/all";
+    }
+    
+
     
  
 }

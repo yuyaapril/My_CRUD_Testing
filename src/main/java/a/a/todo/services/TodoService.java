@@ -1,5 +1,6 @@
 package a.a.todo.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -48,6 +49,17 @@ public class TodoService {
       todo.setCompleted(!todo.isCompleted());
       todoRepo.save(todo);
     }
+  }
+
+  public List<Todo> filter(boolean completed) {
+    List<Todo> tds = new ArrayList<>();
+    List<Todo> todos = todoRepo.findAll();
+    for (Todo todo : todos) {
+      if (todo.isCompleted() == completed) {
+        tds.add(todo);
+            }
+    }
+        return tds;
   }
   
   public void drop(Long id) {
